@@ -49,6 +49,8 @@ Malter oops para upload de imagens)
 
 5°yarn global add node-gyp (Necessário executar comando para corrigir bug do bit crypt)
 
+6°Caso o erro persistir, execute na seguinte ordem: yarn add bcrypt. E em seguida: yarn global add node-gyp.
+
 # Executar projeto 
 
 Comando para iniciar: yarn start
