@@ -1,9 +1,18 @@
 const express = require("express");
 const app = express();
+const dotenv = require("dotenv");
+const mongoose = require("mongoose");
 
-app.use("/teste",(req,res)=>{
-    console.log("Olá está é minha url")
+dotenv.config();
+
+mongoose
+    .connect(process.env.MONGO_URL, {
+        useNewUrlParser: true, 
+        useUnifiedTopology: true 
 })
+.then(console.log("Conectado MONGODB"))
+.catch((err) => console.log(err));
+
 
 app.listen("5000", ()=> {
     console.log("Sistema está rodando...");
