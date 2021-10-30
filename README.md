@@ -38,6 +38,8 @@ Malter oops para upload de imagens)
 
 3°yarn add nodemon
 
+4°yarn add bit crypt (Para proteger a visualização de nossa senha no mongodb)
+
 # Executar projeto 
 
 Comando para iniciar: yarn start
