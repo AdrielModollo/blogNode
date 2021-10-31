@@ -38,7 +38,7 @@ Obs: Note que essas dependências precisam ser instalado a nível da pasta API.
 
 1° yarn add express mongoose dotenv multer 
 
-(Servidor expresso para conectar com nosso mongoose)
+(Servidor expresso para conectar com nosso mongoose. Multer permite o upload de imagens)
 
 2°npm init (Manter padrão)
 

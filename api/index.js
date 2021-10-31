@@ -6,6 +6,8 @@ const authRoute = require("./routes/auth");
 const userRoute = require("./routes/users");
 const postRoute = require("./routes/posts");
 const categoryRoute = require("./routes/categories");
+const multer = require("multer");
+const path = require("path");
 
 dotenv.config();
 app.use(express.json()); // Para enviar qualquer json em um objeto
@@ -18,10 +20,26 @@ mongoose
 .then(console.log("Conectado MONGODB"))
 .catch((err) => console.log(err));
 
+//Apenas um breve exemplo de envio de imagens, para exibi-lás é necessária a parte do client
+const storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+      cb(null, "images");
+    },
+    filename: (req, file, cb) => {
+      cb(null, req.body.name);
+    },
+  });
+  
+  const upload = multer({ storage: storage });
+  app.post("/api/upload", upload.single("file"), (req, res) => {
+    res.status(200).json("Arquivo enviado");
+  });
+
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
 app.use("/api/posts", postRoute);
 app.use("/api/categories", categoryRoute);
+
 
 app.listen("5000", ()=> {
     console.log("Sistema está rodando...");
