@@ -30,7 +30,7 @@ router.post("/login", async (req, res) => {
       const validated = await bcrypt.compare(req.body.password, user.password);
       !validated && res.status(400).json("Credencial incorreta!");
   
-      const { password, ...others } = user._doc;
+      const { password, ...others } = user._doc; //Não aparecer a senha no retorno
       
       res.status(200).json(others);
     } catch (err) {
