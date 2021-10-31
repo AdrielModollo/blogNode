@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "40a222c4-cf7a-4e9d-9185-117d9b771f38",
+		"_postman_id": "17d7775e-8de7-4ce5-b4ce-489f8814478b",
 		"name": "blog",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -174,11 +174,8 @@
 		},
 		{
 			"name": "AtualizarPost",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
 			"request": {
-				"method": "GET",
+				"method": "PUT",
 				"header": [],
 				"body": {
 					"mode": "raw",
@@ -209,6 +206,15 @@
 			"request": {
 				"method": "DELETE",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"adrielmodollo\",\r\n    \"title\": \"Node é massa\",\r\n    \"desc\": \"Programando em node\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
 					"raw": "localhost:5000/api/posts/colocarIDpost",
 					"host": [
