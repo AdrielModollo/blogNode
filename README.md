@@ -38,14 +38,13 @@ Obs: Note que essas dependências precisam ser instalado a nível da pasta API.
 
 1° yarn add express mongoose dotenv multer 
 
-(Servidor expresso para conectar com nosso mongoose. 
-Malter oops para upload de imagens)
+(Servidor expresso para conectar com nosso mongoose)
 
 2°npm init (Manter padrão)
 
-3°yarn add nodemon
+3°yarn add nodemon (Automatiza o reinicio da aplicação para reconhecer novas modificações)
 
-4°yarn add bit crypt (Para proteger a visualização de nossa senha no mongodb. https://www.npmjs.com/package/bcrypt)
+4°yarn add bit crypt (Para proteger a visualização no postman de nossa senha registrada no mongodb. https://www.npmjs.com/package/bcrypt)
 
 5°yarn global add node-gyp (Necessário executar comando para corrigir bug do bit crypt)
 
