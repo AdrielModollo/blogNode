@@ -54,5 +54,24 @@ Obs: Note que essas dependências precisam ser instalado a nível da pasta API.
 
 Comando para iniciar: yarn start
 
+# Como testar?
 
+O servidor está configurado local na porta 5000, dentro de nossa pasta api, ou seja, localhost:5000/api. Necessário passar as ações, anexei uma exportação de todos os metódos utilizados em POSTMAN, assim é só importar o arquivo e testar. 
+Exemplo:
+localhost:5000/api/auth/register <- Cadastra nosso usuário
+{
+    "username":"adrielmodollo",
+    "email":"adrielmodollo@outlook.com",
+    "password":"1234"
+}
+
+localhost:5000/api/auth/login   <= Faz o acesso
+{
+    "username": "adrielmodollo",
+    "password": "1234"
+}
+
+Como importar? No postman clique em collections > import > file > upload files > Seleciona nosso arquivo dentro da pasta postaman "blog.postman_collection" > import 
+
+Obs: Note que a partir deste momento, todas as requests de testes será incluída, já com todos os JSON.
 
