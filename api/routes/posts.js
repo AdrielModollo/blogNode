@@ -13,9 +13,33 @@ router.post("/", async (req, res) => {
   }
 });
 
+//Atualizar postagem
+router.put("/:id", async (req, res) => {
+    try {
+      const post = await Post.findById(req.params.id);
+      if (post.username === req.body.username) {
+        try {
+          const updatedPost = await Post.findByIdAndUpdate(
+            req.params.id,
+            {
+              $set: req.body,
+            },
+            { new: true }
+          );
+          res.status(200).json(updatedPost);
+        } catch (err) {
+          res.status(500).json(err);
+        }
+      } else {
+        res.status(401).json("Você pode atualizar somente seus posts!");
+      }
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  });
 
   
-//Deleta postagem
+//Próximo a ser atualizado
 router.delete("/:id", async(req,res) => {
     if(req.body.userId === req.params.id) {
         try{
