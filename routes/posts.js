@@ -2,7 +2,6 @@ const router = require("express").Router();
 const User = require("../models/User");
 const Post = require("../models/Post");
 
-//Criar postagem
 router.post("/", async (req, res) => {
   const newPost = new Post(req.body);
   try {
@@ -13,7 +12,6 @@ router.post("/", async (req, res) => {
   }
 });
 
-//Atualizar postagem
 router.put("/:id", async (req, res) => {
     try {
       const post = await Post.findById(req.params.id);
@@ -39,7 +37,7 @@ router.put("/:id", async (req, res) => {
   });
 
   
-//Deletar post
+
 router.delete("/:id", async (req, res) => {
     try {
       const post = await Post.findById(req.params.id);
@@ -59,7 +57,7 @@ router.delete("/:id", async (req, res) => {
   });
   
 
-//Recuperar postagem
+
 router.get("/:id", async (req, res) => {
     try {
       const post = await Post.findById(req.params.id);
@@ -69,7 +67,6 @@ router.get("/:id", async (req, res) => {
     }
   });
 
-  //Retornar todos os posts com condição de usuário e categoria
 router.get("/", async (req, res) => {
     const username = req.query.user;
     const catName = req.query.cat;

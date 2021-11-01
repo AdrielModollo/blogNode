@@ -4,7 +4,7 @@ const Post = require("../models/Post");
 const bcrypt = require('bcrypt');
 
 
-//Atualiza
+
 router.put("/:id", async(req,res) => {
     if(req.body.userId === req.params.id) {
             if(req.body.password){
@@ -15,7 +15,7 @@ router.put("/:id", async(req,res) => {
             const updatedUser = await User.findByIdAndUpdate(req.params.id, {
                 $set:req.body,
             },
-            {new:true}//envie este novo usuário atualizado
+            {new:true}
         );
             res.status(200).json(updatedUser);
         } catch(err){
@@ -26,7 +26,6 @@ router.put("/:id", async(req,res) => {
     }
 });
 
-//Deleta
 router.delete("/:id", async(req,res) => {
     if(req.body.userId === req.params.id) {
         try{
@@ -46,12 +45,12 @@ router.delete("/:id", async(req,res) => {
     }
 });
 
-//Recuperar usuário
+
 router.get("/:id", async (req, res) => {
     try {
       const user = await User.findById(req.params.id);
-      const { password, ...others } = user._doc; //Para ocultar senha e enviar status de resposta para outras centenas
-      res.status(200).json(others);
+      const { password, ...restricted } = user._doc;
+      res.status(200).json(restricted);
     } catch (err) {
       res.status(500).json(err);
     }

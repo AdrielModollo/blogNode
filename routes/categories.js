@@ -12,7 +12,6 @@ router.post("/", async (req, res) => {
 });
 
 
-//Basicamente o mesmo que fiz em post, exceto que não temos a busca por categoria especifica.
 router.get("/", async (req, res) => {
     try {
       const cats = await Category.find();
