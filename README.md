@@ -26,9 +26,9 @@ O Yarn melhora nosso tempo de download de pacotes.
 
 5°No arquivo .env substitua a URL exemplo pela sua. (Não configurei dentro do arquivo .env a URL para evitar expor as variaveis em repositório)
 
-6°Troque o password pela senha atual configurada: <password>
+6°Troque o password pela senha atual configurada: password
 
-7°Mude o nome do banco de dados: mongodb.net/<NAME OF YOUR DATABASE>
+7°Mude o nome do banco de dados: mongodb.net/NAME OF YOUR DATABASE
 
 Parametros de conexão mongoDB: https://mongoosejs.com/
 
