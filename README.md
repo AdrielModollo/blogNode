@@ -39,9 +39,9 @@ Executar comando: yarn
 
 Comando para iniciar: 
 
-yarn start <- Em produção
+yarn start <= Em produção
 
-yarn dev <- Em desenvolvimento
+yarn dev <= Em desenvolvimento
 
 
 # Como executar o projeto com docker
