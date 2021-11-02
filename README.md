@@ -38,7 +38,9 @@ Executar comando: yarn
 # Executar projeto sem docker
 
 Comando para iniciar: 
+
 yarn start <- Em produção
+
 yarn dev <- Em desenvolvimento
 
 
