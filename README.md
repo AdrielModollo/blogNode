@@ -48,7 +48,7 @@ Comando para iniciar: docker-compose up
 
 # Como testar?
 
-localhost:3001/routes/parametro <- Com docker
+localhost:3001/routes/function/parametro <- Com docker
 
 Caso houver dúvidas você pode consultar a "Documentação API blog.pdf" em nosso tópico "Realizando testes com postman".
 
