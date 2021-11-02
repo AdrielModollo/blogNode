@@ -1,11 +1,10 @@
-const router = require("express").Router();
 const User = require("../models/User");
 const Post = require("../models/Post");
 const bcrypt = require('bcrypt');
 
 
-
-router.put("/:id", async(req,res) => {
+module.exports = router => {
+router.put("/users/:id", async(req,res) => {
     if(req.body.userId === req.params.id) {
             if(req.body.password){
                 const salt = await bcrypt.genSalt(10);
@@ -26,7 +25,7 @@ router.put("/:id", async(req,res) => {
     }
 });
 
-router.delete("/:id", async(req,res) => {
+router.delete("/users/:id", async(req,res) => {
     if(req.body.userId === req.params.id) {
         try{
             const user = await User.findById(req.params.id);
@@ -46,7 +45,7 @@ router.delete("/:id", async(req,res) => {
 });
 
 
-router.get("/:id", async (req, res) => {
+router.get("/users/:id", async (req, res) => {
     try {
       const user = await User.findById(req.params.id);
       const { password, ...restricted } = user._doc;
@@ -55,6 +54,4 @@ router.get("/:id", async (req, res) => {
       res.status(500).json(err);
     }
   });
-  
-
-module.exports = router;
+}

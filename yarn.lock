@@ -132,11 +132,6 @@ base64-js@^1.3.1:
   resolved "https://registry.yarnpkg.com/base64-js/-/base64-js-1.5.1.tgz#1b1b440160a5bf7ad40b650f095963481903930a"
   integrity sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==
 
-bcrpyt@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/bcrpyt/-/bcrpyt-2.0.0.tgz#67a22ef871b95e391c9da4e2b944771737753db4"
-  integrity sha1-Z6Iu+HG5XjkcnaTiuUR3Fzd1PbQ=
-
 bcrypt@^5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/bcrypt/-/bcrypt-5.0.1.tgz#f1a2c20f208e2ccdceea4433df0c8b2c54ecdf71"
@@ -149,11 +144,6 @@ binary-extensions@^2.0.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-2.2.0.tgz#75f502eeaf9ffde42fc98829645be4ea76bd9e2d"
   integrity sha512-jDctJ/IVQbZoJykoeHbhXpOlNBqGNcwXJKJog42E5HDPUwQTSdjCHdihjj0DlnheQ7blbT6dHOafNAiS8ooQKA==
-
-bit@^1.0.20:
-  version "1.0.20"
-  resolved "https://registry.yarnpkg.com/bit/-/bit-1.0.20.tgz#9b34523209ac290aa7411ae8f7f6cdc1cc755447"
-  integrity sha512-c8oEAYOi8KjAdDmdkLTR669YNvv9f/FWpkx5noFgPMj2DnG4j+HbEN+HRblwUb9V3zDMbVAb8Jx19qrn+9EHvw==
 
 body-parser@1.19.0:
   version "1.19.0"
@@ -371,11 +361,6 @@ core-util-is@~1.0.0:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.3.tgz#a6042d3634c2b27e9328f837b965fac83808db85"
   integrity sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ==
-
-crypt@^0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/crypt/-/crypt-0.0.2.tgz#88d7ff7ec0dfb86f713dc87bbb42d044d3e6c41b"
-  integrity sha1-iNf/fsDfuG9xPch7u0LQRNPmxBs=
 
 crypto-random-string@^2.0.0:
   version "2.0.0"

@@ -2,10 +2,7 @@ const express = require("express");
 const app = express();
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
-const authRoute = require("./routes/auth");
-const userRoute = require("./routes/users");
-const postRoute = require("./routes/posts");
-const categoryRoute = require("./routes/categories");
+const setupRouters = require("../config/routes");
 const multer = require("multer");
 const path = require("path");
 
@@ -34,12 +31,9 @@ const storage = multer.diskStorage({
     res.status(200).json("Arquivo enviado");
   });
 
-app.use("/auth", authRoute);
-app.use("/users", userRoute);
-app.use("/posts", postRoute);
-app.use("/categories", categoryRoute);
 
-
-app.listen("5000", ()=> {
-    console.log("Sistema está rodando...");
+  setupRouters(app);
+  
+app.listen(process.env.PORT, ()=> {
+    console.log(`Sistema rodando na porta ${process.env.PORT}`);
 });

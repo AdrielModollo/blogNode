@@ -14,7 +14,7 @@ Verificar instalação: yarn --version
 Por que optei por Yarn?
 O Yarn melhora nosso tempo de download de pacotes.
 
-# Configurar mongodb 
+# Configurar mongodb para rodar sem docker
 
 1°Acesse sua conta mongodb
 
@@ -37,13 +37,17 @@ Parametros de conexão mongoDB: https://mongoosejs.com/
 Executar comando: yarn
 (Desta forma será instalada todas depedências já declarada em nosso package.json).
 
-# Executar projeto 
+# Executar projeto sem docker
 
 Comando para iniciar: yarn start
 
+# Como executar o projeto com docker
+
+Comando para iniciar: docker-compose up
+
 # Como testar?
 
-localhost:5000/routes/parametro
+localhost:3001/routes/parametro <- Com docker
 
 Caso houver dúvidas você pode consultar a "Documentação API blog.pdf" em nosso tópico "Realizando testes com postman".
 
