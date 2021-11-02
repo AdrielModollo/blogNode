@@ -22,13 +22,11 @@ O Yarn melhora nosso tempo de download de pacotes.
 
 3°Selecione a opção de aplicação
 
-4°Renomeie o arquivo "example.env" para somente ".env" 
+4°No arquivo .env substitua a URL exemplo pela sua. (O correto é não deixar configurado a URL para subir em repositório, mas para agilizar o processo de teste, deixei fixo!)
 
-5°No arquivo .env substitua a URL exemplo pela sua. (Não configurei dentro do arquivo .env a URL para evitar expor as variaveis em repositório)
+5°Troque o password pela senha atual configurada: password
 
-6°Troque o password pela senha atual configurada: password
-
-7°Mude o nome do banco de dados: mongodb.net/NAME OF YOUR DATABASE
+6°Mude o nome do banco de dados: mongodb.net/NAME OF YOUR DATABASE
 
 Parametros de conexão mongoDB: https://mongoosejs.com/
 
@@ -39,7 +37,10 @@ Executar comando: yarn
 
 # Executar projeto sem docker
 
-Comando para iniciar: yarn start
+Comando para iniciar: 
+yarn start <- Em produção
+yarn dev <- Em desenvolvimento
+
 
 # Como executar o projeto com docker
 

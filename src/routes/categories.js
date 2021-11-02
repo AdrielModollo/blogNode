@@ -1,23 +1,6 @@
-const Category = require("../models/Category");
+const controller = require('../controllers/categories')
 
 module.exports = router => {
-router.post("/categories", async (req, res) => {
-  const newCat = new Category(req.body);
-  try {
-    const savedCat = await newCat.save();
-    res.status(200).json(savedCat);
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
-
-router.get("/categories", async (req, res) => {
-    try {
-      const cats = await Category.find();
-      res.status(200).json(cats);
-    } catch (err) {
-      res.status(500).json(err);
-    }
-  });
+  router.post('/categories/register', async (req, res) => controller.register(req, res))
+  router.get('/categories/consult', async (req, res) => controller.consult(req, res))
 }
